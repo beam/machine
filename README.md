@@ -56,6 +56,13 @@ default   -        virtualbox     Running   tcp://192.168.99.188:2376           
 staging   -        digitalocean   Running   tcp://203.0.113.81:2376             v1.9.1
 ```
 
+## Build in local Docker
+```console
+USE_CONTAINER=true TARGET_OS=linux TARGET_ARCH=amd64 make build
+sudo mv bin/docker-machine /usr/local/bin/docker-machine
+chmod +x /usr/local/bin/docker-machine
+```
+
 ## Installation and documentation
 
 Full documentation [is available here](https://docs.docker.com/machine/).
